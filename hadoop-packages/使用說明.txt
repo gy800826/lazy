@@ -1,0 +1,32 @@
+(****user名稱必須為hadoop****)
+
+先到hadoop-packages的root資料夾下
+將所有hosts加入config_hosts.txt
+		(ip hostname)
+
+再把hadoop-packages丟到/home/hadoop/
+使用root,user登入執行該資料夾內程式(.py)
+
+1.root: cd /home/hadoop/
+	(擇一版本執行)
+	執行 python /home/hadoop/hadoop-packages/root/centOS7,jdk1.8.py
+	
+2.user: 先執行		     (xx.xx.xx.xx)
+	python namenodeip.py namenodeip
+	再執行 hadoop-2.8.0.py 即完成安裝
+
+3.
+	mkdir -p /home/hadoop/tmp
+	hadoop namenode -format 
+	start-all.sh
+	mr-jobhistory-daemon.sh start historyserver
+
+
+
+
+    root執行 		       hadoop執行		     hadoop執行
+(centOS7,jdk1.8.py －＞python namenodeip.py namenodeip －＞ hadoop-2.8.0.py )
+
+
+
+
